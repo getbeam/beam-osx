@@ -38,30 +38,18 @@ class Screenshot {
     
     
     func createTempoararyFolder(path:String) -> Bool {
-        
-        debugPrint("createTempoararyFolder called")
-        
         // Creates /tmp in bundle if it doesn't yet exist
         // Should be handled elsewhere
         let fileManager = NSFileManager()
         if(!fileManager.fileExistsAtPath(path)) {
-            
-            debugPrint("Folder does not exist")
-            
             do {
                 try fileManager.createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
-                
-                debugPrint("Folder created")
-                
                 return true
             } catch {
                 print(error)
                 return false
             }
-            
         }
-        
-        debugPrint("Folder exists, not created")
         
         return false
     }
