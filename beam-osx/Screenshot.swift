@@ -10,7 +10,7 @@ import Foundation
 
 class Screenshot {
     
-    let temporaryFolderPath = NSBundle.mainBundle().bundlePath + "/tmp"
+    let temporaryFolderPath = NSBundle.mainBundle().bundlePath + "/Contents/tmp"
     
     init() {
         debugPrint("Screenshot Initialized!")
@@ -30,26 +30,26 @@ class Screenshot {
         /// Debug
         debugPrint("This should not be rpinted until the screenshot task has finished.")
         
-        createTempoararyFolder()
+        createTempoararyFolder(temporaryFolderPath)
         
         
         return 0
     }
     
     
-    func createTempoararyFolder() -> Bool {
+    func createTempoararyFolder(path:String) -> Bool {
         
         debugPrint("createTempoararyFolder called")
         
         // Creates /tmp in bundle if it doesn't yet exist
         // Should be handled elsewhere
         let fileManager = NSFileManager()
-        if(!fileManager.fileExistsAtPath(temporaryFolderPath)) {
+        if(!fileManager.fileExistsAtPath(path)) {
             
             debugPrint("Folder does not exist")
             
             do {
-                try fileManager.createDirectoryAtPath(temporaryFolderPath, withIntermediateDirectories: true, attributes: nil)
+                try fileManager.createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
                 
                 debugPrint("Folder created")
                 

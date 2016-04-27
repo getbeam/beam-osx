@@ -14,6 +14,8 @@
 		D91AEE901CD136DC00EC147D /* beam_osxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AEE8F1CD136DC00EC147D /* beam_osxUITests.swift */; };
 		D977E43D1CD13D650098C609 /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977E43C1CD13D650098C609 /* Screenshot.swift */; };
 		D977E4431CD145110098C609 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = D977E4421CD145110098C609 /* Application.xib */; };
+		D977E4471CD15CB40098C609 /* screenshot_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977E4461CD15CB40098C609 /* screenshot_tests.swift */; };
+		D977E4481CD15DFA0098C609 /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977E43C1CD13D650098C609 /* Screenshot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		D91AEE911CD136DC00EC147D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D977E43C1CD13D650098C609 /* Screenshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
 		D977E4421CD145110098C609 /* Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
+		D977E4461CD15CB40098C609 /* screenshot_tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = screenshot_tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 			children = (
 				D91AEE841CD136DC00EC147D /* beam_osxTests.swift */,
 				D91AEE861CD136DC00EC147D /* Info.plist */,
+				D977E4461CD15CB40098C609 /* screenshot_tests.swift */,
 			);
 			path = "beam-osxTests";
 			sourceTree = "<group>";
@@ -266,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D91AEE851CD136DC00EC147D /* beam_osxTests.swift in Sources */,
+				D977E4481CD15DFA0098C609 /* Screenshot.swift in Sources */,
+				D977E4471CD15CB40098C609 /* screenshot_tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
