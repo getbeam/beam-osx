@@ -37,6 +37,14 @@ class Screenshot {
     }
     
     
+    /**
+        Creates a folder at a desired path.
+     
+        - Note: The functions name is somewhat misleading since it will create a folder of any name at any given path.
+        The name is kept because it's only objective is to creat the tmp folder for us.
+     
+        - Parameter path: The desired path of the directory
+    */
     func createTempoararyFolder(path:String) -> Bool {
         // Creates /tmp in bundle if it doesn't yet exist
         // Should be handled elsewhere
@@ -53,4 +61,5 @@ class Screenshot {
         
         return false
     }
+    
 }
