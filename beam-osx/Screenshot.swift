@@ -10,20 +10,32 @@ import Foundation
 
 class Screenshot {
     
+    /// Path of the temporary folder to save screenshots in
     let temporaryFolderPath = NSBundle.mainBundle().bundlePath + "/Contents/tmp"
+    
     
     init() {
         debugPrint("Screenshot Initialized!")
         captureScreenshot()
     }
     
-    /// Takes a screenhot using the screencapture command
+    
+    // MARK: Capture Screenshot
+    
+    
+    /**
+        Captures a screenshot using the screencapture unix command and saves it to the Desktop
+        
+        - Important: This Function is not finished and may change drastically in the future
+        
+        - Returns: Always 0, for some reason
+     */
     func captureScreenshot() -> NSNumber {
         
         /// Set the task
         let screenshotTask = NSTask()
         screenshotTask.launchPath = "/usr/sbin/screencapture"
-        screenshotTask.arguments = ["-i", "/Users/Cheese/Desktop/BeamScreenshot.png"]
+        screenshotTask.arguments = ["-i", "/Users/Cheese/Desktop/BeamScreenshot.png"] // TODO: Save in correct Path
         screenshotTask.launch()
         screenshotTask.waitUntilExit()
         
@@ -32,10 +44,12 @@ class Screenshot {
         
         createTempoararyFolder(temporaryFolderPath)
         
-        
+        // TODO: Fix return Type
         return 0
     }
     
+    
+    // MARK: Helpers 
     
     /**
         Creates a folder at a desired path.
@@ -44,7 +58,9 @@ class Screenshot {
         The name is kept because it's only objective is to creat the tmp folder for us.
      
         - Parameter path: The desired path of the directory
-    */
+     
+        - Returns: true if a folder was created, false otherwise
+     */
     func createTempoararyFolder(path:String) -> Bool {
         // Creates /tmp in bundle if it doesn't yet exist
         // Should be handled elsewhere
