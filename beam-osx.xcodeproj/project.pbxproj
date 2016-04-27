@@ -10,9 +10,10 @@
 		D91AEE731CD136DC00EC147D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AEE721CD136DC00EC147D /* AppDelegate.swift */; };
 		D91AEE751CD136DC00EC147D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AEE741CD136DC00EC147D /* ViewController.swift */; };
 		D91AEE771CD136DC00EC147D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D91AEE761CD136DC00EC147D /* Assets.xcassets */; };
-		D91AEE7A1CD136DC00EC147D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D91AEE781CD136DC00EC147D /* Main.storyboard */; };
 		D91AEE851CD136DC00EC147D /* beam_osxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AEE841CD136DC00EC147D /* beam_osxTests.swift */; };
 		D91AEE901CD136DC00EC147D /* beam_osxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91AEE8F1CD136DC00EC147D /* beam_osxUITests.swift */; };
+		D977E43D1CD13D650098C609 /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977E43C1CD13D650098C609 /* Screenshot.swift */; };
+		D977E4431CD145110098C609 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = D977E4421CD145110098C609 /* Application.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 		D91AEE721CD136DC00EC147D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D91AEE741CD136DC00EC147D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D91AEE761CD136DC00EC147D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D91AEE791CD136DC00EC147D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D91AEE7B1CD136DC00EC147D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D91AEE801CD136DC00EC147D /* beam-osxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "beam-osxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91AEE841CD136DC00EC147D /* beam_osxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beam_osxTests.swift; sourceTree = "<group>"; };
@@ -45,6 +45,8 @@
 		D91AEE8B1CD136DC00EC147D /* beam-osxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "beam-osxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91AEE8F1CD136DC00EC147D /* beam_osxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beam_osxUITests.swift; sourceTree = "<group>"; };
 		D91AEE911CD136DC00EC147D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D977E43C1CD13D650098C609 /* Screenshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
+		D977E4421CD145110098C609 /* Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,9 @@
 				D91AEE721CD136DC00EC147D /* AppDelegate.swift */,
 				D91AEE741CD136DC00EC147D /* ViewController.swift */,
 				D91AEE761CD136DC00EC147D /* Assets.xcassets */,
-				D91AEE781CD136DC00EC147D /* Main.storyboard */,
 				D91AEE7B1CD136DC00EC147D /* Info.plist */,
+				D977E43C1CD13D650098C609 /* Screenshot.swift */,
+				D977E4421CD145110098C609 /* Application.xib */,
 			);
 			path = "beam-osx";
 			sourceTree = "<group>";
@@ -226,8 +229,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D977E4431CD145110098C609 /* Application.xib in Resources */,
 				D91AEE771CD136DC00EC147D /* Assets.xcassets in Resources */,
-				D91AEE7A1CD136DC00EC147D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D91AEE751CD136DC00EC147D /* ViewController.swift in Sources */,
+				D977E43D1CD13D650098C609 /* Screenshot.swift in Sources */,
 				D91AEE731CD136DC00EC147D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,17 +291,6 @@
 			targetProxy = D91AEE8C1CD136DC00EC147D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D91AEE781CD136DC00EC147D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D91AEE791CD136DC00EC147D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D91AEE921CD136DC00EC147D /* Debug */ = {
@@ -475,6 +468,7 @@
 				D91AEE961CD136DC00EC147D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D91AEE971CD136DC00EC147D /* Build configuration list for PBXNativeTarget "beam-osxTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +477,7 @@
 				D91AEE991CD136DC00EC147D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D91AEE9A1CD136DC00EC147D /* Build configuration list for PBXNativeTarget "beam-osxUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +486,7 @@
 				D91AEE9C1CD136DC00EC147D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
