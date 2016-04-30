@@ -35,12 +35,13 @@ class Screenshot {
         /// Set the task
         let screenshotTask = NSTask()
         screenshotTask.launchPath = "/usr/sbin/screencapture"
-        screenshotTask.arguments = ["-i", "/Users/Cheese/Desktop/BeamScreenshot.png"] // TODO: Save in correct Path
+        screenshotTask.arguments = ["-i", temporaryFolderPath + "/screenshot.png"] // TODO: Save in correct Path
         screenshotTask.launch()
         screenshotTask.waitUntilExit()
         
         /// Debug
-        debugPrint("This should not be rpinted until the screenshot task has finished.")
+        debugPrint("Screenshot saved to " + temporaryFolderPath);
+        debugPrint("This should not be printed until the screenshot task has finished.")
         
         createTempoararyFolder(temporaryFolderPath)
         
