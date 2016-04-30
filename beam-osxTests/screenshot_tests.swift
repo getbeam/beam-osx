@@ -58,5 +58,28 @@ class screenshot_tests: XCTestCase {
         removeTestingDirectory()
     
     }
+    
+    func testTemporaryFolderExists() {
+        let screenshot = Screenshot()
+        
+        let existingPath = NSBundle.mainBundle().bundlePath
+        let newPath = NSBundle.mainBundle().bundlePath + "/Contents/testPath"
+        
+        XCTAssert(screenshot.temporaryFolderExists(existingPath) == true)
+        XCTAssert(screenshot.temporaryFolderExists(newPath) == false)
+        
+        func removeTestingDirectory() {
+            let fileManager = NSFileManager()
+            do {
+                try fileManager.removeItemAtPath(newPath)
+            } catch {
+                print(error)
+            }
+            
+        }
+        
+        removeTestingDirectory()
+        
+    }
 
 }

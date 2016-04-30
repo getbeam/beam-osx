@@ -35,7 +35,7 @@ class Screenshot {
         /// Set the task
         let screenshotTask = NSTask()
         screenshotTask.launchPath = "/usr/sbin/screencapture"
-        screenshotTask.arguments = ["-i", temporaryFolderPath + "/screenshot.png"] // TODO: Save in correct Path
+        screenshotTask.arguments = ["-i", temporaryFolderPath + "/screenshot.png"]
         screenshotTask.launch()
         screenshotTask.waitUntilExit()
         
@@ -77,6 +77,19 @@ class Screenshot {
         }
         
         return false
+    }
+    
+    /**
+        Checks if a directory exists at the given path.
+        
+        - Parameter path: The path to be checked
+     
+        - Returns: true, if a directroy at the given path exists
+     
+    */
+    func temporaryFolderExists(path:String) -> Bool {
+        let fileManager = NSFileManager()
+        return fileManager.fileExistsAtPath(path)
     }
     
 }
