@@ -32,6 +32,11 @@ class Screenshot {
      */
     func captureScreenshot() -> NSNumber {
         
+        // Check if tmp folder exists, create it if it does not
+        if(!temporaryFolderExists(temporaryFolderPath)) {
+            createTempoararyFolder(temporaryFolderPath)
+        }
+        
         /// Set the task
         let screenshotTask = NSTask()
         screenshotTask.launchPath = "/usr/sbin/screencapture"
@@ -42,8 +47,16 @@ class Screenshot {
         /// Debug
         debugPrint("Screenshot saved to " + temporaryFolderPath);
         debugPrint("This should not be printed until the screenshot task has finished.")
+        debugPrint(screenshotTask.terminationStatus)
         
-        createTempoararyFolder(temporaryFolderPath)
+        // If the user aborted the screenshot task, return without data
+        if(screenshotTask.terminationStatus > 0) {
+            debugPrint("Task aborted") // Debug
+            return 0;
+        }
+        
+        
+        
         
         // TODO: Fix return Type
         return 0
