@@ -25,11 +25,9 @@ class Screenshot {
     
     
     /**
-        Captures a screenshot using the screencapture unix command and saves it to the Desktop
-        
-        - Important: This Function is not finished and may change drastically in the future
-        
-        - Returns: Always 0, for some reason
+        Captures a screenshot using the screencapture unix command and saves it to a temporary folder
+     
+        - Returns: The taken screenshot as an NSImage
      */
     func captureScreenshot() -> NSImage? {
         
