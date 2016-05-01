@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AppKit
 
 class Screenshot {
     
@@ -16,7 +17,7 @@ class Screenshot {
     
     init() {
         debugPrint("Screenshot Initialized!")
-        captureScreenshot()
+        let screenshot = captureScreenshot()
     }
     
     
@@ -30,7 +31,7 @@ class Screenshot {
         
         - Returns: Always 0, for some reason
      */
-    func captureScreenshot() -> NSNumber {
+    func captureScreenshot() -> NSImage? {
         
         // Check if tmp folder exists, create it if it does not
         if(!temporaryFolderExists(temporaryFolderPath)) {
@@ -52,14 +53,18 @@ class Screenshot {
         // If the user aborted the screenshot task, return without data
         if(screenshotTask.terminationStatus > 0) {
             debugPrint("Task aborted") // Debug
-            return 0;
+            return nil;
         }
         
+        // Obtain screenshot as NSImage
+        let screenshot:NSImage = NSImage(contentsOfFile: temporaryFolderPath + "/screenshot.png")!
         
+        // Debug
+        debugPrint(screenshot.description)
         
         
         // TODO: Fix return Type
-        return 0
+        return screenshot
     }
     
     
