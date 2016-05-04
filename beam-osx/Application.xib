@@ -28,6 +28,9 @@
                 </menuItem>
                 <menuItem title="Quit" id="YxC-MN-BAC">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitClicked:" target="KRf-IA-2Q1" id="iZc-27-pf3"/>
+                    </connections>
                 </menuItem>
             </items>
             <point key="canvasLocation" x="137.5" y="13.5"/>

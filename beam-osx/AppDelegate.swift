@@ -17,6 +17,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let screenshot = Screenshot()
     }
     
+    @IBAction func quitClicked(sender: NSMenuItem) {
+        NSApplication.sharedApplication().terminate(self)
+    }
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
 
