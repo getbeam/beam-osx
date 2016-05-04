@@ -22,6 +22,9 @@
             <items>
                 <menuItem title="Take a Screenshot" id="UOe-IK-pQz">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="takeScreenshotClicked:" target="KRf-IA-2Q1" id="2Nf-lJ-641"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Quit" id="YxC-MN-BAC">
                     <modifierMask key="keyEquivalentModifierMask"/>

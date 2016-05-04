@@ -11,8 +11,12 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
     @IBOutlet weak var statusMenu: NSMenu!
+    
+    @IBAction func takeScreenshotClicked(sender: NSMenuItem) {
+        let screenshot = Screenshot()
+    }
+    
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
 
@@ -21,9 +25,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         debugPrint("App has started")
         setupStatusBarApp()
-        
-        // let screenshot = Screenshot()
-        
     }
     
     
