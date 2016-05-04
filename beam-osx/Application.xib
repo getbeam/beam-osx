@@ -13,6 +13,21 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="KRf-IA-2Q1" customClass="AppDelegate" customModule="beam_osx" customModuleProvider="target"/>
+        <customObject id="KRf-IA-2Q1" customClass="AppDelegate" customModule="beam_osx" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="yxt-IN-bE5" id="i0o-Q0-B2R"/>
+            </connections>
+        </customObject>
+        <menu id="yxt-IN-bE5">
+            <items>
+                <menuItem title="Take a Screenshot" id="UOe-IK-pQz">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Quit" id="YxC-MN-BAC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="137.5" y="13.5"/>
+        </menu>
     </objects>
 </document>

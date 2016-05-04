@@ -12,11 +12,26 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 
+    @IBOutlet weak var statusMenu: NSMenu!
+    
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
-        print("App has started")
-        let screenshot = Screenshot()
+        debugPrint("App has started")
+        setupStatusBarApp()
+        
+        // let screenshot = Screenshot()
+        
+    }
+    
+    
+    
+    func setupStatusBarApp() {
+        debugPrint("Entered setupStatusBarApp")
+        statusItem.title = "S"
+        statusItem.menu = statusMenu
         
     }
 
